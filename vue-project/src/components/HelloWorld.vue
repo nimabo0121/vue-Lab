@@ -10,9 +10,7 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <h3>
-     事件處理與表單綁定
-    </h3>
+   
   </div>
 </template>
 
