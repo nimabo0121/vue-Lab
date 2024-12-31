@@ -5,10 +5,12 @@ import HelloWorld from './components/HelloWorld.vue'
 import vOn from './components/v-on.vue';
 import HelloVue from './components/Hello-vue.vue';
 import onMounted from './components/on-mounted.vue';
+import VueComponents from './components/Vue-components .vue';
 const visibilityState  = ref({
   vOn: false,
   HelloVue: false,
   onMounted: false,
+  VueComponents: false,
 })
 
 const toggleVisibility = (key) => {
@@ -41,6 +43,10 @@ function getButtonText(key) {
       生命週期、偵聽器、模板引用 {{ getButtonText('onMounted') }}
     </button>
     <onMounted v-if="visibilityState.onMounted" />
+    <button @click="toggleVisibility('VueComponents')">
+      組件基礎 Components {{ getButtonText('VueComponents') }}
+    </button>
+    <VueComponents v-if="visibilityState.VueComponents" />
   </main>
 </template>
 

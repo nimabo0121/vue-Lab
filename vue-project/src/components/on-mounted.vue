@@ -129,7 +129,7 @@ function refHandler(el){
         <p>但在某些場景中，我們希望在建立偵聽器時，立即執行一遍回呼。</p>
         <p>我們可以透過傳入immediate: true選項來強制偵聽器的回呼立即執行。</p>
         <input v-model="obj2.count">
-        <h3>WatchEffect</h3>
+        <h3>~~ WatchEffect ~~</h3>
         <div>
             <a href="https://cn.vuejs.org/guide/essentials/watchers.html">Vue偵聽器文件</a>
             <img src="/src/assets/1.png" alt="">
