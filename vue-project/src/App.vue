@@ -6,11 +6,15 @@ import vOn from './components/v-on.vue';
 import HelloVue from './components/Hello-vue.vue';
 import onMounted from './components/on-mounted.vue';
 import VueComponents from './components/Vue-components .vue';
+import ModelApp from './components/v-model/ModelApp.vue';
+import SlotsApp from './components/slots/SlotsApp.vue';
 const visibilityState  = ref({
   vOn: false,
   HelloVue: false,
   onMounted: false,
   VueComponents: false,
+  ModelApp: false,
+  SlotsApp:false,
 })
 
 const toggleVisibility = (key) => {
@@ -47,9 +51,18 @@ function getButtonText(key) {
       組件基礎 Components {{ getButtonText('VueComponents') }}
     </button>
     <VueComponents v-if="visibilityState.VueComponents" />
+    <button @click="toggleVisibility('ModelApp')">
+      組件 v-model {{ getButtonText('ModelApp') }}
+    </button>
+    <ModelApp v-if="visibilityState.ModelApp" />
+    <button @click="toggleVisibility('SlotsApp')">
+      Slots與依賴注入 {{ getButtonText('SlotsApp') }}
+    </button>
+    <SlotsApp v-if="visibilityState.SlotsApp" />
+    
   </main>
+  
 </template>
-
 <style scoped>
 header {
   line-height: 1.5;

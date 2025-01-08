@@ -42,7 +42,7 @@ const props = {
         <br />
         <p style="text-align: center;">validator 範例</p>
         <p> 自定義校驗函數, 這邊function寫在子元件中,<span style="color: red;">
-                校驗父元件傳入參數 count < 5 </span>
+                校驗父元件傳入參數 count 大於 5 </span>
         </p>
         <MyComp greeting-message="456" :obj="{ count: 4 }" />
 

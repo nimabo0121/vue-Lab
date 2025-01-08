@@ -135,7 +135,7 @@ const groceryList = ref([
                 <button @click="reverse">reverse</button>
             </p>
             <ul v-if="show && list.length > 0">
-                <li v-for="value of list">
+                <li v-for="value of list" :key="value">
                     {{ value }}
                 </li>
             </ul>
